@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="--查看MySQL本次启动后的运行时间(单位：秒)
+show status like 'uptime';
+
+--查看select语句的执行数
+show [global] status like 'com_select';
+
+--查看inse..." />
+    <meta name="keywords" content="mysql" />
+    <link rel="stylesheet" href="https://dayuser.github.io/media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/vs2015.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://dayuser.github.io/media/css/live2d.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://dayuser.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://dayuser.github.io/media/css/live2d.css">
-    <meta name="description" content="温故而知新" />
     <title>Dayuser</title>
 </head>
-<style>
-    @media screen and (max-width: 1300px) {
-        .archives-content ul li>span {
-            display: none;
-        }
-
-        .archives-content ul {
-            padding: 0px;
-        }
-    }
-</style>
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
@@ -276,73 +273,158 @@
             alert("博主暂未设置QQ联系方式");
     }
 </script></div>
-                <div id="main" class="col-xs-12 col-sm-7" style="z-index: 999;">
-                    <body>
-    <div id="friendscontainermobile">
-        
-        
-        <div class="friend-box" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://dayuser.github.io/" class="title" target="_blank">me</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'http://ericam.top/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-            <div class="flink-info">
-                <a href="http://ericam.top/" class="title" target="_blank">ericam</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'https://saky.site/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://saky.site/" class="title" target="_blank">さくら荘後の花園</a>
-                <div style="margin-top:10px"></div>
-                <p>Always believe that something wonderful
-is about to happen</p>
-            </div>
-        </div>
-        
-        
-    </div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://dayuser.github.io/media/css/font-awesome.css">
+<style>
 
-    <div id="friendscontainer">
-        
-        
-        <div class="background" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-                <h2>me</h2>
-                <h3></h3>
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://dayuser.github.io/post-images/mysql-shi-wu-cha-xun.jpeg" class="postimage" style="cursor:auto">
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'http://ericam.top/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-                <h2>ericam</h2>
-                <h3></h3>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-05-11</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://dayuser.github.io/tag/1-nh4A5SA/" class="postlink">
+                        <i class="fa fa-tag"></i> mysql
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'https://saky.site/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-                <h2>さくら荘後の花園</h2>
-                <h3>Always believe that something wonderful
-is about to happen</h3>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>mysql事务查询</h2>
             </div>
+            <div class="text ">
+                <pre><code>--查看MySQL本次启动后的运行时间(单位：秒)
+show status like 'uptime';
+
+--查看select语句的执行数
+show [global] status like 'com_select';
+
+--查看insert语句的执行数
+show [global] status like 'com_insert';
+
+--查看update语句的执行数
+show [global] status like 'com_update';
+
+--查看delete语句的执行数
+show [global] status like 'com_delete';
+
+--查看试图连接到MySQL(不管是否连接成功)的连接数
+show status like 'connections';
+
+--查看线程缓存内的线程的数量。
+show status like 'threads_cached';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看创建用来处理连接的线程数。如果Threads_created较大，你可能要增加thread_cache_size值。
+show status like 'threads_created';
+
+--查看激活的(非睡眠状态)线程数。
+show status like 'threads_running';
+
+
+--查看立即获得的表的锁的次数。
+show status like 'table_locks_immediate';
+
+--查看不能立即获得的表的锁的次数。如果该值较高，并且有性能问题，你应首先优化查询，然后拆分表或使用复制。
+show status like 'table_locks_waited';
+
+--查看创建时间超过slow_launch_time秒的线程数。
+show status like 'slow_launch_threads';
+
+--查看查询时间超过long_query_time秒的查询的个数。
+show status like 'slow_queries';
+
+--查询某库内的所有表
+mysql -uroot -p123456 -Bse &quot;select table_name from information_schema.tables where table_schema = 'database'
+
+-- 查看正在执行的sql
+show processlist
+
+-- 如果表不存在则创建表
+CREATE  TABLE IF NOT EXISTS new_table LIKE old_table; 
+
+-- 交换字段位置 （字段1 前，字段2 后）
+ALTER TABLE table_name CHANGE 字段2 字段2 varchar(45) AFTER  字段1；
+-- 删除字段
+ALTER TABLE table_name drop column ad_action_new;
+-- 添加字段（在字段1 之后添加新字段）
+ALTER TABLE table_name ADD COLUMN 新字段 varchar(45) AFTER  字段1;
+-- 修改字段
+ALTER TABLE table_name modify COLUMN column_name varchar(45) DEFAULT '0';
+-- 添加索引
+alter table TableName add index (列的列表) ；
+-- 查看符号占多少字节
+select length('1') from dual;//返回1,表示1个字符
+
+</code></pre>
+
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://dayuser.github.io/post/pythonlist/">
+                    python（list）
+                </a>
+            </div>
+            
         </div>
-        
-        
     </div>
 </body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
                     <div name="comment" style="background: white">
                         <div class="commentcontainer">
                             
@@ -374,14 +456,15 @@ is about to happen</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-2"></div>
+                <div class="toc-container">
+                    
+                </div>
             </div>
         </div>
         <div id="bg">
         </div>
         <div id="bgurl" style="display:none">/media/images/custom-bgimage.jpeg</div>
     </div>
-
     <!-- 响应式布局，针对手机端内容显示 -->
     <div class="nav-small">
         <head>
@@ -456,74 +539,150 @@ is about to happen</h3>
   <!-- 引入BootStrap核心js文件 -->
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-        <div style="margin-top:60px"></div>
-        <body>
-    <div id="friendscontainermobile">
-        
-        
-        <div class="friend-box" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://dayuser.github.io/" class="title" target="_blank">me</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'http://ericam.top/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-            <div class="flink-info">
-                <a href="http://ericam.top/" class="title" target="_blank">ericam</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'https://saky.site/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://saky.site/" class="title" target="_blank">さくら荘後の花園</a>
-                <div style="margin-top:10px"></div>
-                <p>Always believe that something wonderful
-is about to happen</p>
-            </div>
-        </div>
-        
-        
-    </div>
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://dayuser.github.io/media/css/font-awesome.css">
+<style>
 
-    <div id="friendscontainer">
-        
-        
-        <div class="background" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-                <h2>me</h2>
-                <h3></h3>
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://dayuser.github.io/post-images/mysql-shi-wu-cha-xun.jpeg" class="postimage" style="cursor:auto">
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'http://ericam.top/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-                <h2>ericam</h2>
-                <h3></h3>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-05-11</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://dayuser.github.io/tag/1-nh4A5SA/" class="postlink">
+                        <i class="fa fa-tag"></i> mysql
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'https://saky.site/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-                <h2>さくら荘後の花園</h2>
-                <h3>Always believe that something wonderful
-is about to happen</h3>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>mysql事务查询</h2>
             </div>
+            <div class="text ">
+                <pre><code>--查看MySQL本次启动后的运行时间(单位：秒)
+show status like 'uptime';
+
+--查看select语句的执行数
+show [global] status like 'com_select';
+
+--查看insert语句的执行数
+show [global] status like 'com_insert';
+
+--查看update语句的执行数
+show [global] status like 'com_update';
+
+--查看delete语句的执行数
+show [global] status like 'com_delete';
+
+--查看试图连接到MySQL(不管是否连接成功)的连接数
+show status like 'connections';
+
+--查看线程缓存内的线程的数量。
+show status like 'threads_cached';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看创建用来处理连接的线程数。如果Threads_created较大，你可能要增加thread_cache_size值。
+show status like 'threads_created';
+
+--查看激活的(非睡眠状态)线程数。
+show status like 'threads_running';
+
+
+--查看立即获得的表的锁的次数。
+show status like 'table_locks_immediate';
+
+--查看不能立即获得的表的锁的次数。如果该值较高，并且有性能问题，你应首先优化查询，然后拆分表或使用复制。
+show status like 'table_locks_waited';
+
+--查看创建时间超过slow_launch_time秒的线程数。
+show status like 'slow_launch_threads';
+
+--查看查询时间超过long_query_time秒的查询的个数。
+show status like 'slow_queries';
+
+--查询某库内的所有表
+mysql -uroot -p123456 -Bse &quot;select table_name from information_schema.tables where table_schema = 'database'
+
+-- 查看正在执行的sql
+show processlist
+
+-- 如果表不存在则创建表
+CREATE  TABLE IF NOT EXISTS new_table LIKE old_table; 
+
+-- 交换字段位置 （字段1 前，字段2 后）
+ALTER TABLE table_name CHANGE 字段2 字段2 varchar(45) AFTER  字段1；
+-- 删除字段
+ALTER TABLE table_name drop column ad_action_new;
+-- 添加字段（在字段1 之后添加新字段）
+ALTER TABLE table_name ADD COLUMN 新字段 varchar(45) AFTER  字段1;
+-- 修改字段
+ALTER TABLE table_name modify COLUMN column_name varchar(45) DEFAULT '0';
+-- 添加索引
+alter table TableName add index (列的列表) ；
+-- 查看符号占多少字节
+select length('1') from dual;//返回1,表示1个字符
+
+</code></pre>
+
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://dayuser.github.io/post/pythonlist/">
+                    python（list）
+                </a>
+            </div>
+            
         </div>
-        
-        
     </div>
 </body>
-        <div style="margin-bottom:60px">&nbsp;</div>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
         <div name="comment" style="background: white">
             <div class="commentcontainer">
                 
@@ -560,9 +719,10 @@ is about to happen</h3>
         <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
     </div>
 </body>
-
-</html>
-<script src="https://dayuser.github.io/media/js/index.js"></script>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://dayuser.github.io/media/js/post.js"></script>
 
 <script type="text/javascript">
     var message_Path = '/live2d/'

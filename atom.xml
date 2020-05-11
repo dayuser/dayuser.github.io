@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dayuser.github.io</id>
     <title>Dayuser</title>
-    <updated>2020-05-10T18:58:15.520Z</updated>
+    <updated>2020-05-11T14:32:06.835Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dayuser.github.io"/>
     <link rel="self" href="https://dayuser.github.io/atom.xml"/>
@@ -10,6 +10,162 @@
     <logo>https://dayuser.github.io/images/avatar.png</logo>
     <icon>https://dayuser.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Dayuser</rights>
+    <entry>
+        <title type="html"><![CDATA[mysql事务查询]]></title>
+        <id>https://dayuser.github.io/post/mysql-shi-wu-cha-xun/</id>
+        <link href="https://dayuser.github.io/post/mysql-shi-wu-cha-xun/">
+        </link>
+        <updated>2020-05-11T14:28:23.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>--查看MySQL本次启动后的运行时间(单位：秒)
+show status like 'uptime';
+
+--查看select语句的执行数
+show [global] status like 'com_select';
+
+--查看insert语句的执行数
+show [global] status like 'com_insert';
+
+--查看update语句的执行数
+show [global] status like 'com_update';
+
+--查看delete语句的执行数
+show [global] status like 'com_delete';
+
+--查看试图连接到MySQL(不管是否连接成功)的连接数
+show status like 'connections';
+
+--查看线程缓存内的线程的数量。
+show status like 'threads_cached';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看当前打开的连接的数量。
+show status like 'threads_connected';
+
+--查看创建用来处理连接的线程数。如果Threads_created较大，你可能要增加thread_cache_size值。
+show status like 'threads_created';
+
+--查看激活的(非睡眠状态)线程数。
+show status like 'threads_running';
+
+
+--查看立即获得的表的锁的次数。
+show status like 'table_locks_immediate';
+
+--查看不能立即获得的表的锁的次数。如果该值较高，并且有性能问题，你应首先优化查询，然后拆分表或使用复制。
+show status like 'table_locks_waited';
+
+--查看创建时间超过slow_launch_time秒的线程数。
+show status like 'slow_launch_threads';
+
+--查看查询时间超过long_query_time秒的查询的个数。
+show status like 'slow_queries';
+
+--查询某库内的所有表
+mysql -uroot -p123456 -Bse &quot;select table_name from information_schema.tables where table_schema = 'database'
+
+-- 查看正在执行的sql
+show processlist
+
+-- 如果表不存在则创建表
+CREATE  TABLE IF NOT EXISTS new_table LIKE old_table; 
+
+-- 交换字段位置 （字段1 前，字段2 后）
+ALTER TABLE table_name CHANGE 字段2 字段2 varchar(45) AFTER  字段1；
+-- 删除字段
+ALTER TABLE table_name drop column ad_action_new;
+-- 添加字段（在字段1 之后添加新字段）
+ALTER TABLE table_name ADD COLUMN 新字段 varchar(45) AFTER  字段1;
+-- 修改字段
+ALTER TABLE table_name modify COLUMN column_name varchar(45) DEFAULT '0';
+-- 添加索引
+alter table TableName add index (列的列表) ；
+-- 查看符号占多少字节
+select length('1') from dual;//返回1,表示1个字符
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python（list）]]></title>
+        <id>https://dayuser.github.io/post/pythonlist/</id>
+        <link href="https://dayuser.github.io/post/pythonlist/">
+        </link>
+        <updated>2020-05-11T14:19:48.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Python 中可以通过组合一些值得到多种 复合 数据类型。其中最常用的 列表 ，可以通过方括号括起、逗号分隔的一组值（元素）得到。一个 列表 可以包含不同类型的元素，但通常使用时各个元素类型相同</p>
+</blockquote>
+<pre><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>和字符串（以及各种内置的 sequence 类型）一样，列表也支持索引和切片:</p>
+<pre><code>&gt;&gt;&gt; squares[0]  # indexing returns the item
+1
+&gt;&gt;&gt; squares[-1]
+25
+&gt;&gt;&gt; squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+</code></pre>
+<p>所有的切片操作都返回一个新列表，这个新列表包含所需要的元素。就是说，如下的切片会返回列表的一个新的(浅)拷贝:</p>
+<pre><code>&gt;&gt;&gt; squares[:]
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>列表同样支持拼接操作:</p>
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre>
+<p>与 immutable 的字符串不同, 列表是一个 mutable 类型，就是说，它自己的内容可以改变:</p>
+<pre><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  # something's wrong here
+&gt;&gt;&gt; 4 ** 3  # the cube of 4 is 64, not 65!
+64
+&gt;&gt;&gt; cubes[3] = 64  # replace the wrong value
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]
+</code></pre>
+<p>你也可以在列表末尾通过 append() 方法 来添加新元素（我们将在后面介绍有关方法的详情）:</p>
+<pre><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+&gt;&gt;&gt; cubes.append(7 ** 3)  # and the cube of 7
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125, 216, 343]
+</code></pre>
+<p>给切片赋值也是可以的，这样甚至可以改变列表大小，或者把列表整个清空:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # replace some values
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # now remove them
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+&gt;&gt;&gt; # clear the list by replacing all the elements with an empty list
+&gt;&gt;&gt; letters[:] = []
+&gt;&gt;&gt; letters
+[]
+</code></pre>
+<p>内置函数 len() 也可以作用到列表上:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4
+</code></pre>
+<p>也可以嵌套列表 (创建包含其他列表的列表), 比如说:</p>
+<pre><code>&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python（str）]]></title>
         <id>https://dayuser.github.io/post/pythonstr/</id>

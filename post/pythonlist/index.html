@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="
+Python 中可以通过组合一些值得到多种 复合 数据类型。其中最常用的 列表 ，可以通过方括号括起、逗号分隔的一组值（元素）得到。一个 列表 可以包含不同类型的元素，但通常使用时各个元素类型相同
+
+&gt;&gt;&gt; square..." />
+    <meta name="keywords" content="python" />
+    <link rel="stylesheet" href="https://dayuser.github.io/media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/vs2015.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://dayuser.github.io/media/css/live2d.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://dayuser.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://dayuser.github.io/media/css/live2d.css">
-    <meta name="description" content="温故而知新" />
     <title>Dayuser</title>
 </head>
-<style>
-    @media screen and (max-width: 1300px) {
-        .archives-content ul li>span {
-            display: none;
-        }
-
-        .archives-content ul {
-            padding: 0px;
-        }
-    }
-</style>
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
@@ -276,73 +270,167 @@
             alert("博主暂未设置QQ联系方式");
     }
 </script></div>
-                <div id="main" class="col-xs-12 col-sm-7" style="z-index: 999;">
-                    <body>
-    <div id="friendscontainermobile">
-        
-        
-        <div class="friend-box" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://dayuser.github.io/" class="title" target="_blank">me</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'http://ericam.top/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-            <div class="flink-info">
-                <a href="http://ericam.top/" class="title" target="_blank">ericam</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'https://saky.site/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://saky.site/" class="title" target="_blank">さくら荘後の花園</a>
-                <div style="margin-top:10px"></div>
-                <p>Always believe that something wonderful
-is about to happen</p>
-            </div>
-        </div>
-        
-        
-    </div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div id="main" class="col-xs-12 col-sm-7">
+                    <link rel="stylesheet" href="https://dayuser.github.io/media/css/font-awesome.css">
+<style>
 
-    <div id="friendscontainer">
-        
-        
-        <div class="background" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-                <h2>me</h2>
-                <h3></h3>
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://dayuser.github.io/post-images/pythonlist.jpeg" class="postimage" style="cursor:auto">
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'http://ericam.top/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-                <h2>ericam</h2>
-                <h3></h3>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-05-11</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://dayuser.github.io/tag/BT_R-knOn/" class="postlink">
+                        <i class="fa fa-tag"></i> python
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'https://saky.site/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-                <h2>さくら荘後の花園</h2>
-                <h3>Always believe that something wonderful
-is about to happen</h3>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>python（list）</h2>
             </div>
+            <div class="text ">
+                <blockquote>
+<p>Python 中可以通过组合一些值得到多种 复合 数据类型。其中最常用的 列表 ，可以通过方括号括起、逗号分隔的一组值（元素）得到。一个 列表 可以包含不同类型的元素，但通常使用时各个元素类型相同</p>
+</blockquote>
+<pre><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>和字符串（以及各种内置的 sequence 类型）一样，列表也支持索引和切片:</p>
+<pre><code>&gt;&gt;&gt; squares[0]  # indexing returns the item
+1
+&gt;&gt;&gt; squares[-1]
+25
+&gt;&gt;&gt; squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+</code></pre>
+<p>所有的切片操作都返回一个新列表，这个新列表包含所需要的元素。就是说，如下的切片会返回列表的一个新的(浅)拷贝:</p>
+<pre><code>&gt;&gt;&gt; squares[:]
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>列表同样支持拼接操作:</p>
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre>
+<p>与 immutable 的字符串不同, 列表是一个 mutable 类型，就是说，它自己的内容可以改变:</p>
+<pre><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  # something's wrong here
+&gt;&gt;&gt; 4 ** 3  # the cube of 4 is 64, not 65!
+64
+&gt;&gt;&gt; cubes[3] = 64  # replace the wrong value
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]
+</code></pre>
+<p>你也可以在列表末尾通过 append() 方法 来添加新元素（我们将在后面介绍有关方法的详情）:</p>
+<pre><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+&gt;&gt;&gt; cubes.append(7 ** 3)  # and the cube of 7
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125, 216, 343]
+</code></pre>
+<p>给切片赋值也是可以的，这样甚至可以改变列表大小，或者把列表整个清空:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # replace some values
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # now remove them
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+&gt;&gt;&gt; # clear the list by replacing all the elements with an empty list
+&gt;&gt;&gt; letters[:] = []
+&gt;&gt;&gt; letters
+[]
+</code></pre>
+<p>内置函数 len() 也可以作用到列表上:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4
+</code></pre>
+<p>也可以嵌套列表 (创建包含其他列表的列表), 比如说:</p>
+<pre><code>&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'
+</code></pre>
+
+            </div>
+            
+            <div class="prev-post">
+                上一篇
+                <a href="https://dayuser.github.io/post/mysql-shi-wu-cha-xun/">
+                    mysql事务查询
+                </a>
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://dayuser.github.io/post/pythonstr/">
+                    python（str）
+                </a>
+            </div>
+            
         </div>
-        
-        
     </div>
 </body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
                     <div name="comment" style="background: white">
                         <div class="commentcontainer">
                             
@@ -374,14 +462,15 @@ is about to happen</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-2"></div>
+                <div class="toc-container">
+                    
+                </div>
             </div>
         </div>
         <div id="bg">
         </div>
         <div id="bgurl" style="display:none">/media/images/custom-bgimage.jpeg</div>
     </div>
-
     <!-- 响应式布局，针对手机端内容显示 -->
     <div class="nav-small">
         <head>
@@ -456,74 +545,159 @@ is about to happen</h3>
   <!-- 引入BootStrap核心js文件 -->
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-        <div style="margin-top:60px"></div>
-        <body>
-    <div id="friendscontainermobile">
-        
-        
-        <div class="friend-box" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://dayuser.github.io/" class="title" target="_blank">me</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'http://ericam.top/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-            <div class="flink-info">
-                <a href="http://ericam.top/" class="title" target="_blank">ericam</a>
-                <div style="margin-top:10px"></div>
-                <p></p>
-            </div>
-        </div>
-        
-        <div class="friend-box" onclick="window.location.href= 'https://saky.site/';return false">
-            <img class="friend-avatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-            <div class="flink-info">
-                <a href="https://saky.site/" class="title" target="_blank">さくら荘後の花園</a>
-                <div style="margin-top:10px"></div>
-                <p>Always believe that something wonderful
-is about to happen</p>
-            </div>
-        </div>
-        
-        
-    </div>
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://dayuser.github.io/media/css/font-awesome.css">
+<style>
 
-    <div id="friendscontainer">
-        
-        
-        <div class="background" onclick="window.location.href= 'https://dayuser.github.io/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589127906194-siteLogo.png">
-                <h2>me</h2>
-                <h3></h3>
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="https://dayuser.github.io/post-images/pythonlist.jpeg" class="postimage" style="cursor:auto">
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'http://ericam.top/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324867-siteLogo.png">
-                <h2>ericam</h2>
-                <h3></h3>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-05-11</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://dayuser.github.io/tag/BT_R-knOn/" class="postlink">
+                        <i class="fa fa-tag"></i> python
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
-        <div class="background" onclick="window.location.href= 'https://saky.site/';return false">
-            <div class="infoForm">
-                <img class="favatar" src="/media/images/custom-array-friends-1589128324869-siteLogo.png">
-                <h2>さくら荘後の花園</h2>
-                <h3>Always believe that something wonderful
-is about to happen</h3>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>python（list）</h2>
             </div>
+            <div class="text ">
+                <blockquote>
+<p>Python 中可以通过组合一些值得到多种 复合 数据类型。其中最常用的 列表 ，可以通过方括号括起、逗号分隔的一组值（元素）得到。一个 列表 可以包含不同类型的元素，但通常使用时各个元素类型相同</p>
+</blockquote>
+<pre><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>和字符串（以及各种内置的 sequence 类型）一样，列表也支持索引和切片:</p>
+<pre><code>&gt;&gt;&gt; squares[0]  # indexing returns the item
+1
+&gt;&gt;&gt; squares[-1]
+25
+&gt;&gt;&gt; squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+</code></pre>
+<p>所有的切片操作都返回一个新列表，这个新列表包含所需要的元素。就是说，如下的切片会返回列表的一个新的(浅)拷贝:</p>
+<pre><code>&gt;&gt;&gt; squares[:]
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>列表同样支持拼接操作:</p>
+<pre><code>&gt;&gt;&gt;
+&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre>
+<p>与 immutable 的字符串不同, 列表是一个 mutable 类型，就是说，它自己的内容可以改变:</p>
+<pre><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  # something's wrong here
+&gt;&gt;&gt; 4 ** 3  # the cube of 4 is 64, not 65!
+64
+&gt;&gt;&gt; cubes[3] = 64  # replace the wrong value
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]
+</code></pre>
+<p>你也可以在列表末尾通过 append() 方法 来添加新元素（我们将在后面介绍有关方法的详情）:</p>
+<pre><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+&gt;&gt;&gt; cubes.append(7 ** 3)  # and the cube of 7
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125, 216, 343]
+</code></pre>
+<p>给切片赋值也是可以的，这样甚至可以改变列表大小，或者把列表整个清空:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # replace some values
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # now remove them
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+&gt;&gt;&gt; # clear the list by replacing all the elements with an empty list
+&gt;&gt;&gt; letters[:] = []
+&gt;&gt;&gt; letters
+[]
+</code></pre>
+<p>内置函数 len() 也可以作用到列表上:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4
+</code></pre>
+<p>也可以嵌套列表 (创建包含其他列表的列表), 比如说:</p>
+<pre><code>&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'
+</code></pre>
+
+            </div>
+            
+            <div class="prev-post">
+                上一篇
+                <a href="https://dayuser.github.io/post/mysql-shi-wu-cha-xun/">
+                    mysql事务查询
+                </a>
+            </div>
+            
+            
+            <div class="next-post">
+                下一篇
+                <a href="https://dayuser.github.io/post/pythonstr/">
+                    python（str）
+                </a>
+            </div>
+            
         </div>
-        
-        
     </div>
 </body>
-        <div style="margin-bottom:60px">&nbsp;</div>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
         <div name="comment" style="background: white">
             <div class="commentcontainer">
                 
@@ -560,9 +734,10 @@ is about to happen</h3>
         <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
     </div>
 </body>
-
-</html>
-<script src="https://dayuser.github.io/media/js/index.js"></script>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://dayuser.github.io/media/js/post.js"></script>
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
